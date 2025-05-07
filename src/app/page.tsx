@@ -12,7 +12,7 @@ export default function Home() {
 
   const getArticles = async () => {
     try {
-      const res = await fetch('/api/news');
+      const res = await fetch(`${window.origin}/api/news`);
       const data = await res.json();
 
       setTotalArticles(data.Data || []);
